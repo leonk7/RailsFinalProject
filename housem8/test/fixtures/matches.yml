@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  houseowner: 1
+  houseseeker: 1
+  house: 1
+
+two:
+  houseowner: 1
+  houseseeker: 1
+  house: 1
