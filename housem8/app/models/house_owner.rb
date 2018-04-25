@@ -1,3 +1,9 @@
 class HouseOwner < ApplicationRecord
-	has_one: listing
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  
+  has_one:listing
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+	
 end
