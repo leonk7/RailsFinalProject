@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180425013141) do
+ActiveRecord::Schema.define(version: 20180425032615) do
 
   create_table "house_owners", force: :cascade do |t|
     t.string "listing"
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(version: 20180425013141) do
     t.string "lease_term"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "house_owner_id"
+    t.integer "house_seeker_id"
+    t.index ["house_owner_id"], name: "index_listings_on_house_owner_id"
+    t.index ["house_seeker_id"], name: "index_listings_on_house_seeker_id"
   end
 
   create_table "matches", force: :cascade do |t|
