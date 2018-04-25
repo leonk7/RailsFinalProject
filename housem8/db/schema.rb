@@ -62,6 +62,10 @@ ActiveRecord::Schema.define(version: 20180425035258) do
     t.string "lease_term"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "house_owner_id"
+    t.integer "house_seeker_id"
+    t.index ["house_owner_id"], name: "index_listings_on_house_owner_id"
+    t.index ["house_seeker_id"], name: "index_listings_on_house_seeker_id"
   end
 
   create_table "matches", force: :cascade do |t|
