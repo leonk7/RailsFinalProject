@@ -1,24 +1,11 @@
-# README
+**Team Name**: 
+**Team Members**:
+**Link to final demo**:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Basic Idea**:
 
-Things you may want to cover:
+**Models and Description**:
 
-* Ruby version
+**Features**:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Division of Labor**:
