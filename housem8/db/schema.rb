@@ -10,15 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180420025607) do
+<<<<<<< HEAD
 
-  create_table "house_listings", force: :cascade do |t|
+=======
+ActiveRecord::Schema.define(version: 20180425013141) do
+
+  create_table "house_owners", force: :cascade do |t|
+    t.string "listing"
+    t.string "name"
+    t.string "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "house_seekers", force: :cascade do |t|
+    t.string "name"
+    t.string "gender"
+    t.integer "age"
+    t.string "email"
+    t.integer "min_price"
+    t.integer "max_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "listings", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.string "address"
     t.integer "price"
     t.string "lease_term"
-    t.string "address"
-    t.integer "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.integer "houseowner"
+    t.integer "houseseeker"
+    t.integer "house"
+>>>>>>> master
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
