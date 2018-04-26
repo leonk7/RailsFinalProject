@@ -1,0 +1,9 @@
+<%= simple_form_for @listing do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :price %>
+  <%= f.input :lease_term %>
+  <%= f.file_field :photo %>
+  <%= f.button :submit, class: "create-listing-btn" %>
+<% end %>
