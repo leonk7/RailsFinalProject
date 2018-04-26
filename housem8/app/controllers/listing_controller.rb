@@ -1,4 +1,7 @@
 class ListingController < ApplicationController
+	def index
+		@listings = Listings.all
+	end
 
 	def new
   		@listing = Listing.new
@@ -21,13 +24,19 @@ class ListingController < ApplicationController
 	  	end
   	end
 
-  def delete
-    @list = Listing.find(params[:id])
-    @list.destroy
-    redirect_to root_path
-  end
+  	def delete
+    	@list = Listing.find(params[:id])
+    	@list.destroy
+    	redirect_to root_path
+  	end
 
+  	def next
+  		self.Listing.find(:first, :conditions => ['id > ?', self.id],:order => 'id')
+	end
 
+	def previous
+  		self.Listing.find(:first, :conditions => ['id < ?', self.id], :order => 'id desc')
+	end
   #private methods go at end of file
   	private 
   		def listing_params

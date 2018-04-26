@@ -25,8 +25,7 @@
 	<% end %>
 <% end %>
 
-<<<<<<< HEAD
-<% if !house_owner_signed_in? %>
+<% if (!house_owner_signed_in? && house_seeker_signed_in?) %>
 	<% if @listings %>
 		<% @listings.each do |list|%>
 			<div class="row">
@@ -39,11 +38,10 @@
 			        	<p> <%= list.description %> </p>
 			        	<p> <%= list.price %> </p>
 			        	<p> <%= list.lease_term %> </p>
-			        </div>
-			        <%= button_to "Interested!", :class => "button medium", :method => :post %>
-					<%= button_to "Next Listing", :class => "button medium", %>
+			        </div> 
 			    </div>
 			</div>
+
 		<% end %> 
 		
 	<% end %>
