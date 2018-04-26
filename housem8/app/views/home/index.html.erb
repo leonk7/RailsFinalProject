@@ -33,23 +33,29 @@
 			    <div class="col s12 m7">
 			      <div class="card">
 			        <div class="card-image">
-			        	<span class="card-title"> <%= list.address %> </span>
-			        </div>
-			        <div class="card-content">
-			        	<p><%= "Title: " + list.title %></p>
-			<p><%= "Description: " + list.description %></p>
-			<p><%= "Address: " + list.address %></p>
-			<p><%= "Price: " + list.price.to_s %></p>
-			<p><%= "Lease Term: " + list.lease_term %>
-			</p>
-			        	<%if list.photo.file %>
-							<p>Photo:</p>
-						<%= image_tag(list.photo.url) %>
+			        	<div class="card-content">
+				        	<h2><%= list.address %> </h2>
+				        	<p><%= "Title: " + list.title %></p>
+							<p><%= "Description: " + list.description %></p>
+							<p><%= "Address: " + list.address %></p>
+							<p><%= "Price: $" + list.price.to_s + "/month"%></p>
+							<p><%= "Lease Term: " + list.lease_term %></p>
+				        	<%if list.photo.file %>
+								<p>Photo:</p>
+							<%= image_tag(list.photo.url) %>
 						<% end %>
+			        	</div> 
+
 			        </div> 
+			        <%= button_to "Interested!", listings_path(id: list), :class => "button medium", :method => :post %>
+			        <%= button_to "Not Interested", listings_path(id: list), :class => "button medium", :method => :post%>
+			       
 			    </div>
 			</div>
 
+		<%end %>
+	<%end %>
+<%end %>
 
-	
+
 
