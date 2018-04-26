@@ -10,6 +10,13 @@ class ListingController < ApplicationController
   def show
     @listing = Listing.find(params[:id])
   end
+
+  def like
+    @list = Listing.find(params[:id])
+    @list.likes = @list.likes + 1
+    @list.save
+    redirect_to root_path
+  end
  
   	def create
   		@listing = Listing.create(listing_params)
@@ -24,10 +31,7 @@ class ListingController < ApplicationController
 	  		flash[:error] = "invalid listing"
 	  	end
   	end
-    def hid
-      @list = Listing.find(params[:id])
-      @list.hide
-      redirect_to root_path
+
   	def delete
     	@list = Listing.find(params[:id])
     	@list.destroy

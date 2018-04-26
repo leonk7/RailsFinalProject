@@ -33,7 +33,7 @@
 - owners can view seekers who are interested
 
 **Division of Labor**:
-- Emily: Handled user creation, listing creation/destroying, file uploads (used carrier view gem)
-- Leon: Created layout and view for house seekers, implemented view for house owners to see interested seekers
+- Emily: Handled user creation, listing creation/destroying, updating likes for owners to view, file uploads (used carrier view gem)
+- Leon: Created layout and view for house seekers, implemented mailto for seekers to contact owners
 - Michelle: Made views for listings and implemented gem (materialize-sass)/ did styling in html.erb files
 - Jess: Made controllers and models, implemented homepage view for house seekers to see listings, fixed listing styling

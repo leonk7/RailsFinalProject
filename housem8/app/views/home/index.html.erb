@@ -22,6 +22,8 @@
 			<p><%= "Price: $" + list.price.to_s %></p>
 			<p><%= "Lease Term: " + list.lease_term %>
 			</p>
+			<p><%= "Number of likes: " + list.likes.to_s %>
+			</p>
 			        	<%if list.photo.file %>
 							<p>Photo:</p>
 						<%= image_tag(list.photo.url) %>
@@ -59,8 +61,8 @@
 			        	</div> 
 
 			        </div> 
-			        <%= button_to "Interested!", listings_path(id: list), :class => "button medium", :method => :post %>
-			        <%= button_to "Not Interested", listingshide_path(id: list), :class => "button medium", :method => :post%>
+			        <%= button_to "Interested!", listinglike_path(id: list), :class => "button medium", :method => :post %>
+		        <%= button_to "Not Interested", listings_path(id: list), :class => "button medium", :method => :post%>
 			       
 			    </div>
 			</div>
