@@ -29,5 +29,5 @@
 **Division of Labor**:
 Emily: Handled user creation, listing creation/destroying, file uploads
 Leon:
-Michelle:
+Michelle: Made views for listings and implemented gems/ did styling in html.erb files
 Jess:
