@@ -1,7 +1,16 @@
 <h1> Listing Address </h1>
 
-<div class="container">
-	<nav>
-		<div class="nav-wrapper blue-green darken-1">
-			<% @listings.each do |listing| %>
-			
+<div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+        	<% @listings.each do |listing| %>
+        	<span class="card-title"> <%= listing.address %> </span>
+        </div>
+        <div class="card-content">
+        	<p> <%= listing.description %> </p>
+        	<p> <%= listing.price %> </p>
+        	<p> <%= listing.lease_term %> </p>
+        </div>
+    </div>
+</div>
