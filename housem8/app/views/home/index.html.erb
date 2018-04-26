@@ -1,2 +1,20 @@
 <h3>Welcome to HouseM8</h3>
-<%= image_tag("house1.jpg") %>
+
+<% if house_owner_signed_in? %>
+	<%= button_to "Create New Listing", listings_path, :class => "button medium", :method => :get%>
+
+	<b>Your Listings:</b>
+	<%if @listings %>
+		<% @listings.each do |list| %>
+			<p><%= "Title: " + list.title %></p>
+			<p><%= "Description: " + list.description %></p>
+			<p><%= "Address: " + list.address %></p>
+			<p><%= "Price: " + list.price.to_s %></p>
+			<p><%= "Lease Term: " + list.lease_term %>
+			</p>
+			<p>Photo:</p>
+			<p><%=list.photo%></p>
+			<p>~~~~~~~~~~~~~~~~~~~~~~</p>
+		<%end%>
+	<% end %>
+<% end %>

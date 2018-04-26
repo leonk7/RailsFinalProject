@@ -9,7 +9,8 @@ class ListingController < ApplicationController
   		@listing.update(house_owner_id: current_house_owner.id)
 
 	  	if @listing.save
-	  		redirect_to house_owner_path(current_house_owner) # need to create these routes & views
+        redirect_to root_path
+	  		#redirect_to house_owner_path(current_house_owner) # need to create these routes & views
 	  	else
 	      render "new"
 	  		flash[:error] = "invalid listing"
@@ -20,7 +21,7 @@ class ListingController < ApplicationController
   #private methods go at end of file
   	private 
   		def listing_params
-  			params.require(:listing).permit(:title, :address, :price, :lease_term)
+  			params.require(:listing).permit(:title, :description, :address, :price, :lease_term, :photo)
   		end
 
 end
