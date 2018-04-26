@@ -23,9 +23,28 @@
 <% end %>
 
 <% if !house_owner_signed_in? %>
-	<p><%= link_to 'Listings:', listings_path %> <%= Trainer.count %> registered</p>
-
-	<h2></h2>
-	<%= button_to "Interested!"%>
-	<%= button_to "Next Listing"%>
+	<% if @listings %>
+		<% @listings.each do |list|%>
+			<div class="row">
+			    <div class="col s12 m7">
+			      <div class="card">
+			        <div class="card-image">
+			        	<span class="card-title"> <%= list.address %> </span>
+			        </div>
+			        <div class="card-content">
+			        	<p> <%= list.description %> </p>
+			        	<p> <%= list.price %> </p>
+			        	<p> <%= list.lease_term %> </p>
+			        </div>
+			        <%= button_to "Interested!", :class => "button medium", :method => :post %>
+					<%= button_to "Next Listing", :class => "button medium", %>
+			    </div>
+			</div>
+		<% end %> 
+		
+	<% end %>
+	
+	
+	<h2> </h2>
+	
 <% end %>
