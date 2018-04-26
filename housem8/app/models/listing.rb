@@ -1,3 +1,3 @@
 class Listing < ApplicationRecord
-	belongs_to: house_owner
+	belongs_to:house_owner
 end

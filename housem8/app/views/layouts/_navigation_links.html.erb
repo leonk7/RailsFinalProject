@@ -1,2 +1,14 @@
-<li><%= link_to 'Log In' %></li>
-<li><%= link_to 'Sign Up' %></li>
+<%# add navigation links to this file %>
+
+<% if house_seeker_signed_in? %>
+  <li><%= link_to 'Edit Your Profile', edit_house_seeker_registration_path %></li>
+  <li><%= link_to 'Log Out', destroy_house_seeker_session_path, :method=>'delete' %></li>
+<% elsif house_owner_signed_in? %>
+<li><%= link_to 'Edit Your Profile', edit_house_owner_registration_path %></li>
+  <li><%= link_to 'Log Out', destroy_house_owner_session_path, :method=>'delete' %></li>
+<% else %>
+  <li><%= link_to 'Log In as Seeker', new_house_seeker_session_path %></li>
+  <li><%= link_to 'Join HouseM8 as Seeker', new_house_seeker_registration_path %></li>
+  <li><%= link_to 'Log In as Owner', new_house_owner_session_path %></li>
+  <li><%= link_to 'Join HouseM8 as Owner', new_house_owner_registration_path %></li>
+<% end %>

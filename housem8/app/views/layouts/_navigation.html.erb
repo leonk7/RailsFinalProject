@@ -1,10 +1,12 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-	<!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+<%# navigation styled for Zurb Foundation 5 %>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name"><%= link_to 'HouseM8', root_path %></li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+  <div class="top-bar-section">
+    <ul class="right">
+      <%= render 'layouts/navigation_links' %>
+    </ul>
+  </div>
 </nav>
