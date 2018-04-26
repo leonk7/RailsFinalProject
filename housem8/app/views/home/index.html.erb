@@ -49,6 +49,9 @@
 							<p><%= "Address: " + list.address %></p>
 							<p><%= "Price: $" + list.price.to_s + "/month"%></p>
 							<p><%= "Lease Term: " + list.lease_term %></p>
+							<%= mail_to HouseOwner.find(list.house_owner_id).email do %>
+  								<strong>Email me!</strong> <span></span>
+							<% end %>
 				        	<%if list.photo.file %>
 								<p>Photo:</p>
 							<%= image_tag(list.photo.url) %>
@@ -65,6 +68,3 @@
 		<%end %>
 	<%end %>
 <%end %>
-
-
-
