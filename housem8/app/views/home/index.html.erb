@@ -1,1 +1,16 @@
 <h3>Welcome to HouseM8</h3>
+
+<% if house_owner_signed_in? %>
+	<% button_to "Create New Listing", listings_path, :class => "button medium", :method => :get%>
+
+	<p>Your Listings:</p>
+	<%if @listings %>
+		<% @listings.each do |list| %>
+			<p><%= list.title %></p>
+			<p><%= list.description %></p>
+			<p><%= list.address %></p>
+			<p><%= list.price %></p>
+			<p><%= list.lease_term %></p>
+		<%end%>
+	<% end %>
+<% end %>

@@ -19,7 +19,7 @@
 	) 
 end
 
-[["Michelle, F"], ["Emily", "F"], ["Leon", "M"], ["Jess", "F"]].each do |name, gender|
+[["Michelle", "F"], ["Emily", "F"], ["Leon", "M"], ["Jess", "F"]].each do |name, gender|
 	HouseOwner.create(
 		name: name,
 		email: name+"@housem8.com",

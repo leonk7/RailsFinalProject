@@ -20,7 +20,7 @@ class ListingController < ApplicationController
   #private methods go at end of file
   	private 
   		def listing_params
-  			params.require(:listing).permit(:title, :address, :price, :lease_term)
+  			params.require(:listing).permit(:title, :address, :price, :lease_term, :photo)
   		end
 
 end

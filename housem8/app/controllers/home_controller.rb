@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
  def index
- 	@owners = Listing.all
+ 	@listings = Listing.all
  end
 
 end
