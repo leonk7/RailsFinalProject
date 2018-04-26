@@ -35,9 +35,16 @@
 			        	<span class="card-title"> <%= list.address %> </span>
 			        </div>
 			        <div class="card-content">
-			        	<p> <%= list.description %> </p>
-			        	<p> <%= list.price %> </p>
-			        	<p> <%= list.lease_term %> </p>
+			        	<p><%= "Title: " + list.title %></p>
+			<p><%= "Description: " + list.description %></p>
+			<p><%= "Address: " + list.address %></p>
+			<p><%= "Price: " + list.price.to_s %></p>
+			<p><%= "Lease Term: " + list.lease_term %>
+			</p>
+			        	<%if list.photo.file %>
+							<p>Photo:</p>
+						<%= image_tag(list.photo.url) %>
+						<% end %>
 			        </div> 
 			    </div>
 			</div>
