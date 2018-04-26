@@ -18,3 +18,11 @@
 		<%end%>
 	<% end %>
 <% end %>
+
+<% if !house_owner_signed_in? %>
+	<p><%= link_to 'Listings:', listings_path %> <%= Trainer.count %> registered</p>
+
+	<h2></h2>
+	<%= button_to "Interested!"%>
+	<%= button_to "Next Listing"%>
+<% end %>
