@@ -13,6 +13,7 @@ class ListingController < ApplicationController
  
   	def create
   		@listing = Listing.create(listing_params)
+      @listing.likes = 0
   		@listing.update(house_owner_id: current_house_owner.id)
 
 	  	if @listing.save
@@ -23,7 +24,10 @@ class ListingController < ApplicationController
 	  		flash[:error] = "invalid listing"
 	  	end
   	end
-
+    def hid
+      @list = Listing.find(params[:id])
+      @list.hide
+      redirect_to root_path
   	def delete
     	@list = Listing.find(params[:id])
     	@list.destroy

@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   post "listings/new", to: "listing#create"
   get '/swipe/', to: 'home#swipe'
   patch "listing/destroy", to: "listing#delete", as: "listingsdestroy"
-  
+  post "listing/hide", to:"listing#hide", as: "listingshide"
 end

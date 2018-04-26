@@ -1,5 +1,11 @@
 **Team Name**: HouseM8
-**Team Members**: Jessica Hsiao, Emily Hu, Leon Kwak, Michelle Zhang
+
+**Team Members**: 
+- Jessica Hsiao
+- Emily Hu
+- Leon Kwak
+- Michelle Zhang
+
 **Link to final demo**: **TODO**
 
 **Basic Idea**: Our web application provides a platform for house owners to post listings of properties that they are trying to sell or rent. House seekers can swipe through listings in their price range and contact owners. 
@@ -27,7 +33,7 @@
 - owners can view seekers who are interested
 
 **Division of Labor**:
-Emily: Handled user creation, listing creation/destroying, file uploads
-Leon: Created layout and view for house seekers, implemented view for house owners to see interested seekers
-Michelle: Made views for listings and implemented gems/ did styling in html.erb files
-Jess: Made controllers and models, implemented homepage view for house seekers to see listings, fixed listing styling
+- Emily: Handled user creation, listing creation/destroying, file uploads (used carrier view gem)
+- Leon: Created layout and view for house seekers, implemented view for house owners to see interested seekers
+- Michelle: Made views for listings and implemented gem (materialize-sass)/ did styling in html.erb files
+- Jess: Made controllers and models, implemented homepage view for house seekers to see listings, fixed listing styling
