@@ -30,4 +30,4 @@
 Emily: Handled user creation, listing creation/destroying, file uploads
 Leon: Created layout and view for house seekers, implemented view for house owners to see interested seekers
 Michelle: Made views for listings and implemented gems/ did styling in html.erb files
-Jess: Made controllers and models, implemented functionality to display interest in listings for house seekers
+Jess: Made controllers and models, implemented functionality to display interest in listings for house seekers, recorded screencast
