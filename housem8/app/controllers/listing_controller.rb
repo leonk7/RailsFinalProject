@@ -17,6 +17,12 @@ class ListingController < ApplicationController
 	  	end
   	end
 
+  def delete
+    @list = Listing.find(params[:id])
+    @list.destroy
+    redirect_to root_path
+  end
+
 
   #private methods go at end of file
   	private 

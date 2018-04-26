@@ -16,6 +16,7 @@
 				<p>Photo:</p>
 				<%= image_tag(list.photo.url) %>
 			<% end %>
+			<%= button_to "Delete this Listing", listingsdestroy_path(id: list), :class => "button medium", :method => :patch%>
 			<p>~~~~~~~~~~~~~~~~~~~~~~</p>
 		<%end%>
 	<% end %>
