@@ -27,10 +27,10 @@
 
 **Features**: 
 - users (house seeker/owner) can create profile
-- owners can listing creation/destroying (supports file uploads for images)
+- owners can create/destroy listings (supports file uploads for images)
 - seekers can look through all listings 
-- seekers can contact owners
-- owners can view seekers who are interested
+- seekers can contact owners through email
+- owners can view how many seekers have liked their post
 
 **Division of Labor**:
 - Emily: Handled user creation, listing creation/destroying, updating likes for owners to view, file uploads (used carrier view gem)
