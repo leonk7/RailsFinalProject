@@ -1,4 +1,7 @@
 <h3>Welcome to HouseM8</h3>
+<% if (!house_owner_signed_in? && !house_seeker_signed_in?) %>
+	<%= image_tag("homeimg.png") %>
+<% end %>
 
 <% if house_owner_signed_in? %>
 	<%= button_to "Create New Listing", listings_path, :class => "button medium", :method => :get%>
@@ -22,6 +25,7 @@
 	<% end %>
 <% end %>
 
+<<<<<<< HEAD
 <% if !house_owner_signed_in? %>
 	<% if @listings %>
 		<% @listings.each do |list|%>
@@ -43,8 +47,7 @@
 		<% end %> 
 		
 	<% end %>
-	
-	
-	<h2> </h2>
-	
 <% end %>
+	
+	
+
