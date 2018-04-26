@@ -17,6 +17,10 @@ class ListingUploader < CarrierWave::Uploader::Base
     /image\//
   end
 
+  def store_dir
+    'app/assets/images/uploads'
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:

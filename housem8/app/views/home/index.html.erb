@@ -12,8 +12,11 @@
 			<p><%= "Price: " + list.price.to_s %></p>
 			<p><%= "Lease Term: " + list.lease_term %>
 			</p>
-			<p>Photo:</p>
-			<p><%=list.photo%></p>
+			<%if list.photo.file %>
+				<p>Photo:</p>
+				<%= image_tag(list.photo.url) %>
+			<% end %>
+			<%= button_to "Delete this Listing", listingsdestroy_path(id: list), :class => "button medium", :method => :patch%>
 			<p>~~~~~~~~~~~~~~~~~~~~~~</p>
 		<%end%>
 	<% end %>
