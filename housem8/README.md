@@ -6,7 +6,7 @@
 - Leon Kwak
 - Michelle Zhang
 
-**Link to final demo**: **TODO**
+**Link to final demo**: www.tinyurl.com/railsvid
 
 **Basic Idea**: Our web application provides a platform for house owners to post listings of properties that they are trying to sell or rent. House seekers can swipe through listings in their price range and contact owners. 
 
@@ -34,6 +34,6 @@
 
 **Division of Labor**:
 - Emily: Handled user creation, listing creation/destroying, updating likes for owners to view, file uploads (used carrier view gem)
-- Leon: Created layout and view for house seekers, implemented mailto for seekers to contact owners
+- Leon: Created layout and view for house seekers, implemented mailto for seekers to contact owners, made the screencast
 - Michelle: Made views for listings and implemented gem (materialize-sass)/ did styling in html.erb files
 - Jess: Made controllers and models, implemented homepage view for house seekers to see listings, fixed listing styling
