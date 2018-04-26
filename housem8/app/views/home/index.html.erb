@@ -25,27 +25,6 @@
 	<% end %>
 <% end %>
 
-<% if (!house_owner_signed_in? && house_seeker_signed_in?) %>
-	<% if @listings %>
-		<% @listings.each do |list|%>
-			<div class="row">
-			    <div class="col s12 m7">
-			      <div class="card">
-			        <div class="card-image">
-			        	<span class="card-title"> <%= list.address %> </span>
-			        </div>
-			        <div class="card-content">
-			        	<p> <%= list.description %> </p>
-			        	<p> <%= list.price %> </p>
-			        	<p> <%= list.lease_term %> </p>
-			        </div> 
-			    </div>
-			</div>
 
-		<% end %> 
-		
-	<% end %>
-<% end %>
-	
 	
 
